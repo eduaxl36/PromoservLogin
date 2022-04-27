@@ -1,0 +1,85 @@
+﻿
+
+
+
+#AlteraId {
+    width: 50px;
+}
+
+.swal2-confirm {
+    font-size: 15px !important;
+    width: 80px;
+    display: flex;
+    margin-left: 5px;
+}
+
+.swal2-cancel {
+    font-size: 15px !important;
+    width: 80px;
+    display: flex;
+    margin-left: 5px;
+}
+
+#btn_add {
+    width: 70px;
+    margin-bottom: 2%;
+    height: 50px;
+    color: red;
+}
+
+
+.card {
+
+    padding:30px;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-top:9%;
+    height:45vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    border-radius:50px;
+    
+
+}
+
+#ChaveBling{
+
+
+    margin-bottom:3%;
+
+}
+
+
+
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+}
+
+.card {
+    padding-top: 70px;
+    height: 55vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#btnbing {
+
+cursor:pointer;
+
+}

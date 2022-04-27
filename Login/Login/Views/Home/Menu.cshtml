@@ -1,0 +1,98 @@
+﻿<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoserv Menu</title>
+
+    <link href="~/estilos/Menu.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <a href="@Url.Action("Login", "Autenticacao")" id="Sair" class="SaidaBarra">
+            <ion-icon name="exit-outline"></ion-icon>&nbsp&nbspDeslogar
+        </a>
+        <h3>Sistema Promoserv</h3>
+    </header>
+
+
+    <input type="checkbox" name="" id="chk">
+    <label for="chk" class="menu-icon">&#9776;</label>
+
+    <div class="bg"></div>
+
+    <nav class="menu" id="principal">
+
+        <ul>
+
+            <li>
+                <a href="" class="voltar" id="mainret">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("TabelaUsuarios", "Usuarios")" target="MainFrame" id="HUser">
+                    <ion-icon name="person-outline"></ion-icon>&nbsp&nbspMenu Usuarios
+                </a>
+            </li>
+            <li>
+
+                <a href="@Url.Action("ListaSefaz", "Sefaz")" id="pedidosSefaz" target="MainFrame">
+                    <ion-icon name="documents-outline"></ion-icon>&nbsp&nbspSefaz
+                </a>
+            </li>
+            <li>
+
+                <a href="@Url.Action("ConfigSefaz", "ToolsSefaz")" id="ConfigSefaz" target="MainFrame">
+                    <ion-icon name="hammer-outline"></ion-icon>&nbsp&nbspConfig Sefaz
+                </a>
+            </li>
+            <li>
+
+                <a href="@Url.Action("Login", "Autenticacao")" id="Sair">
+                    <ion-icon name="exit-outline"></ion-icon>&nbsp&nbspSair
+                </a>
+            </li>
+
+
+        </ul>
+
+
+    </nav>
+
+
+    <iframe frameborder="0" name="MainFrame" id="MainFrame">
+    </iframe>
+
+
+</body>
+
+</html>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script src="~/Assets/Uteis/jquery.js"></script>
+
+<script src="~/Assets/menu/Main.js"></script>
+<script src="~/Assets/menu/ControladorEventosTela.js"></script>
+
+<script>
+
+
+
+    $('#ConfigSefaz').click(function () {
+
+        $('#principal').css("transform", "translate(-300px)");
+        $("div").removeClass("bg");
+    });
+
+
+
+</script>

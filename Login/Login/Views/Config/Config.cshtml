@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Lista de Usuarios</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="~/estilos/sefaz/Menu.css" rel="stylesheet" type="text/css">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+        body {
+            font-family: 'poppins', sans-serif;
+            background: rgb(219, 226, 226);
+        }
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <div class="container">
+
+        <div class=" card-block card border-success mb-2" style="max-width: 25rem;">
+            <div class="card-header"><i class="fa fa-key"></i>Chave Bling</div>
+            <div class="card-body text-primary">
+                <div class="form-group ">
+                    <input type="text" class="form-control " id="ChaveBling" required>
+                    <button type="button" class="btn btn-success btn-sm btn-block" id="btnBing" onclick="solicitaAlteracaoChaveBling();">Alterar Chave</button>
+
+                </div>
+
+            </div>
+            <div class="card-header"> <i type="button" class="fas fa-clock"></i>Status Agendador</div>
+            <div class="card-body text-primary">
+                <div class="form-group ">
+
+
+                    <input type="checkbox" checked data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" id="btnagenda" name="toggle-checkbox">
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    
+    
+
+
+
+
+    <input type="hidden" name="name" value="" id="statusRelogio" />
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js" integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4=" crossorigin="anonymous"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="~/Assets/Uteis/jquery.js"></script>
+    <script src="~/Assets/Uteis/JSON-to-Table-1.0.0.js"></script>
+    <script src="~/Assets/sefaz/inicializarComponentes.js"></script>
+    <script src="~/Assets/sefaz/ImportJson.js"></script>
+    <script src="~/Assets/sefaz/DispatcheresAjax.js"></script>
+    <script src="~/Assets/sefaz/Main.js"></script>
+
+
+</body>
+
+</html>

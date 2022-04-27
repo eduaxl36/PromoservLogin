@@ -1,0 +1,199 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Lista de Usuarios</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="~/estilos/TabelaUsuarios/UsuariosTabela.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+
+        body {
+            font-family: 'poppins', sans-serif;
+            background: rgb(219, 226, 226);
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+    <div class="modal fade" id="ModalAltera" tabindex="-1" role="dialog" aria-labelledby="ModalAlteraLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body col-sm-12 col-xs-12">
+
+                    <form id="notEmptyForm" class="form-horizontal">
+
+                        <div class="form-group">
+                            <label for="AlteraId">Id</label>
+                            <input type="text" class="form-control" id="AlteraId" disabled>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="AlteraNome">Nome do usuario</label>
+                            <input type="text" class="form-control" id="AlteraNome" required>
+
+                        </div>
+
+                        <div class=" form-group">
+                            <label for="AlteraLogin">Login</label>
+                            <input type="text" class="form-control " id="AlteraLogin" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="AlteraSenha">Senha</label>
+                            <input type="password" class="form-control " id="AlteraSenha" placeholder="Insira a senha" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ConfirmaAlteracao">Confirmação da Senha</label>
+                            <input type="password" class="form-control " id="ConfirmaAlteracao" placeholder="Confirme a senha" required>
+                        </div>
+
+
+                        <button type="button" class="btn btn-success btn-sm btn-block" id="BtnAlter">Alterar Usuario</button>
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="modal fade" id="ModalCadastro" tabindex="-1" role="dialog" aria-labelledby="ModalCadastraLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body col-sm-12 col-xs-12">
+
+                    <form id="formCadastro" class="form-horizontal">
+
+
+                        <div class="form-group">
+                            <label for="NomeCadastro">Primeiro Nome</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="NomeCadastro"
+                                   placeholder="Insira o nome"
+                                   required>
+
+                        </div>
+
+                        <div class=" form-group ">
+                            <label for="LoginCadastro ">Login</label>
+                            <input type="text" class="form-control " id="LoginCadastro" placeholder="Insira o login" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="CadastroSenha">Senha</label>
+                            <input type="password" class="form-control " id="CadastroSenha" placeholder="Digite a Senha" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="CadastroConfirmacao">Confirmação da Senha</label>
+                            <input type="password" class="form-control " id="CadastroConfirmacao" placeholder="Confirme a senha digitada" required>
+                        </div>
+
+
+                        <button type="button" class="btn btn-success btn-sm btn-block" id="BtnCada">Cadastrar Usuario</button>
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container col-sm-7 col-xs-12">
+
+
+        <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#ModalCadastro" id="btn_add">
+            <ion-icon name="person-add-outline"
+                      data-toggle="modal"
+                      data-target="#ModalCadastro"></ion-icon>
+        </button>
+
+
+
+        <table id="tabela" class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr id="table_head">
+                </tr>
+            </thead>
+
+            <tbody id="table_content">
+            </tbody>
+
+        </table>
+
+
+
+
+    </div>
+
+
+
+
+    <input type="hidden" name="name" value="" id="valtemp" />
+    <input type="hidden" name="name" value="" id="storepass" />
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js" integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4=" crossorigin="anonymous"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+    <script src="~/Assets/Uteis/jquery.js"></script>
+    <script src="~/Assets/Uteis/JSON-to-Table-1.0.0.js"></script>
+    <script src="~/Assets/TabelaUsuarios/ImportJson.js"></script>
+    <script src="~/Assets/TabelaUsuarios/InicializacaoComponentes.js" type="text/javascript"></script>
+    <script src="~/Assets/TabelaUsuarios/DispatcheresAjax.js"></script>
+    <script src="~/Assets/TabelaUsuarios/Constraints.js" type="text/javascript"></script>
+    <script src="~/Assets/TabelaUsuarios/Util.js" type="text/javascript"></script>
+    <script src="~/Assets/TabelaUsuarios/CapturadoresEventos.js" type="text/javascript"></script>
+
+    <script src="~/Assets/TabelaUsuarios/Main.js"></script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

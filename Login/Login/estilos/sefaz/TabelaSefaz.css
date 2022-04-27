@@ -1,0 +1,103 @@
+﻿
+.container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    right: 400px;
+    margin-top: 10%;
+    height: 50vh;
+}
+
+.sourceIcon {
+    display: flex;
+    justify-content: space-evenly;
+    border: none;
+}
+
+#ModalCadastro {
+    margin-top: 6%;
+}
+
+#ModalAltera {
+    margin-top: 3%;
+}
+
+#AlteraId {
+    width: 50px;
+}
+
+.swal2-confirm {
+    font-size: 15px !important;
+    width: 80px;
+    display: flex;
+    margin-left: 5px;
+}
+
+.swal2-cancel {
+    font-size: 15px !important;
+    width: 80px;
+    display: flex;
+    margin-left: 5px;
+}
+
+#btn_add {
+    width: 70px;
+    margin-bottom: 2%;
+    height: 50px;
+    color: red;
+}
+
+table {
+    background-color: #fff;
+}
+.path{
+
+    cursor:pointer;
+
+}
+table {
+    text-align: center;
+}
+
+#headContent {
+    justify-content: end;
+    align-items: center;
+}
+
+.containerInterno {
+    display: flex;
+}
+
+path {
+    padding: 300px;
+    cursor:pointer;
+}
+
+.TriggerExclui {
+    z-index: 50;
+}
+
+
+#toggle-one {
+    background-color: red;
+}
+
+
+#sepContainer > * {
+    margin-right: 10%;
+}
+
+.modal-content {
+    height: 20vh;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnagenda {
+    width: 94px !important
+}

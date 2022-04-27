@@ -1,0 +1,79 @@
+﻿
+.container {
+    width: 50%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sourceIcon {
+    display: flex;
+    justify-content: space-evenly;
+    border: none;
+}
+
+#ModalCadastro {
+    margin-top: 6%;
+}
+
+#ModalAltera {
+    margin-top: 3%;
+}
+
+#AlteraId {
+    width: 50px;
+}
+
+.swal2-confirm {
+    font-size: 15px !important;
+    width: 80px;
+    display: flex;
+    margin-left: 5px;
+}
+
+.swal2-cancel {
+    font-size: 15px !important;
+    width: 80px;
+    display: flex;
+    margin-left: 5px;
+}
+
+#btn_add {
+    width: 70px;
+    margin-bottom: 2%;
+    height: 50px;
+    color: red;
+}
+
+table {
+    background-color: #fff;
+}
+
+table {
+    text-align: center;
+}
+
+#headContent {
+    justify-content: end;
+    align-items: center;
+}
+
+.containerInterno {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.svg {
+    padding: 300px;
+    cursor: pointer;
+}
+
+.TriggerExclui {
+    z-index: 50;
+    cursor:pointer;
+}
+.TriggerAltera {
+
+    cursor: pointer;
+}
